@@ -1,27 +1,47 @@
-# BankApp
+# Small Banking Application - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+Welcome to the Small Banking Application developed using Angular! This application provides basic banking functionalities such as registration, login, cash deposit, cash withdrawal, cash transfer, account statement, and logout.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To get started with the Small Banking Application, follow these steps:
 
-## Code scaffolding
+1. Clone the repository: `git clone [repository URL]`
+2. Navigate to the project directory: `cd small-banking-application-angular`
+3. Install dependencies: `npm install`
+4. Run the development server: `ng serve`
+5. Access the application in your web browser at `http://localhost:4200`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Routes
 
-## Build
+The application uses Angular Router for navigation. Here are the defined routes:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- `/signin`: Sign in to the application.
+- `/signup`: Sign up for a new account.
+- `/`: Home page with navigation to deposit, transfer, withdraw, view statement, and log out.
+  - `/deposit`: Deposit some amount into the account.
+  - `/transfer`: Transfer some amount to another account using email id.
+  - `/withdraw`: Withdraw some amount from the account.
+  - `/home`: View account information.
+  - `/statement`: View account statement.
 
-## Running unit tests
+## Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular Framework
+- TypeScript
+- HTML
+- CSS (Styling framework: [mention framework if used])
 
-## Running end-to-end tests
+## Contributing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Contributions are welcome! If you'd like to contribute to the Small Banking Application Angular project, please follow these steps:
 
-## Further help
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+
+This project is licensed under the [FREE].
