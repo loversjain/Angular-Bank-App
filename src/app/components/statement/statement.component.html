@@ -1,0 +1,94 @@
+<div class="page">
+    <div class="page-wrapper">
+      
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="row row-deck row-cards">
+        
+       
+            <div class="col-md-12">
+               
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Statement of Account </h4>
+                      </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table card-table">
+                          <thead>
+                            <tr>
+                            <th>#</th>
+                            <th>DATETIME</th>
+                            <th>AMOUNT</th>
+                            <th>TYPE</th>
+                            <th>DETAILS</th>
+                            <th>BALANCE</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @if (statement) {
+                              @for (item of statement.data; track item) {
+                                <tr>
+                                  <td>{{item.id}}</td>
+                                  <td>{{item.transaction_date}}</td>
+                                  <td>{{item.amount}}</td>
+                                  <td>{{item.type}}</td>
+                                  <td>{{item.details}}</td>
+                                  <td>{{item.balance}}</td>
+                                  
+                                  
+                                </tr>
+                              }
+                         
+                            }
+                           
+                            
+                           
+                          </tbody>
+                        </table>
+                      </div>
+                  </div>
+                
+                </div>
+              </div>
+        
+            <div  class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <ul class="pagination ">
+                    <li class="page-item ">
+                      <a class="page-link"  href="javascript:void(0)" (click)="changePage(1)"  tabindex="-1" aria-disabled="true">
+                        <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M15 6l-6 6l6 6"></path></svg>
+                        prev
+                      </a>
+                    </li>
+                    @if (statement) {
+                      @for (item of  [].constructor(statement.meta.last_page); track item;let index = $index) {
+                        <li class="page-item"  [ngClass]="{'active' : statement.meta.current_page === index+1}">
+                          <a class="page-link" href="javascript:void(0)" (click)="changePage(index+1)">{{index+1}}</a>
+                        </li>
+                      }
+                    }
+                    
+                   
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" (click)="changePage(statement.meta.last_page)">
+                        next <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l6 6l-6 6"></path></svg>
+                      </a>
+                    </li>
+                  </ul>
+                
+                </div>
+              </div>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+ 

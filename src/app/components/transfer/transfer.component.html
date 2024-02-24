@@ -1,0 +1,58 @@
+<div class="page">
+   
+    <div class="page-wrapper">
+     
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="row row-deck row-cards">
+        
+       
+            <div class="col-md-12">
+               
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Transfer Money </h4>
+                      </div>
+                  <div class="card-body">
+                   
+                       
+                          <div class="card-body">
+                           
+                            <div class="input-icon">
+                                <label class="form-label">Email Address</label>
+                              <input type="email" value="" [(ngModel)]="email" class="form-control" placeholder="Enter Email">
+                              
+                            </div>
+                            <div class="input-icon">
+                                <label class="form-label">Amount</label>
+                                <input type="number" value="" [(ngModel)]="transferAmt" class="form-control" placeholder="Amount">
+                                
+                              </div>
+                          </div>
+                          <div class="card-footer">
+                            <div class="row ">
+                              <div>
+                                <a href="javascript:void(0)" (click)="onSave()" class="btn btn-primary">
+                                  Transfer
+                                </a>
+                                <span style="color: green;"> {{transferResponse?.message}}</span>
+
+                              </div>
+                            </div>
+                          </div>
+                        
+                  </div>
+                
+                </div>
+              </div>
+        
+            
+         
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ 

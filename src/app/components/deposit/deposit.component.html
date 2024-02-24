@@ -1,0 +1,52 @@
+<div class="page">
+
+    <div class="page-wrapper">
+      <!-- Page header -->
+      
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="row row-deck row-cards">
+        
+       
+            <div class="col-md-12">
+               
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Deposit Money </h4>
+                      </div>
+                  <div class="card-body">
+                   
+                       
+                          <div class="card-body">
+                           
+                            <div class="input-icon">
+                              <input type="number" [(ngModel)]="depositAmount" class="form-control" placeholder="Amount">
+                              
+                            </div>
+                          </div>
+                          <div class="card-footer">
+                            <div class="row ">
+                              <div>
+                                <a href="javascript:void(0)" [ariaDisabled]="depositAmount < 0" (click)="onSave()" class="btn btn-primary">
+                                  Save
+                                </a>
+                                <span style="color: green;"> {{depositresponse?.message}}</span>
+                              </div>
+                            </div>
+                          </div>
+                        
+                  </div>
+                
+                </div>
+              </div>
+        
+            
+         
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+ 
